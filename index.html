@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs in Pakistan | Find Your Next Career</title>
+    <meta name="description" content="Explore the latest government and private sector jobs across Pakistan.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">JOBS IN PAKISTAN</div>
+            <button class="icon-btn" aria-label="Search">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </div>
+        
+        <!-- Navigation Tabs -->
+        <div class="tabs-container">
+            <div class="container tabs">
+                <button class="tab-btn active" data-category="all">All Jobs</button>
+                <button class="tab-btn" data-category="government">Government</button>
+                <button class="tab-btn" data-category="private">Private</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1>Find Your Next Career</h1>
+            <p>Explore opportunities across Pakistan</p>
+            <div class="job-counter" id="live-counter">Loading Jobs...</div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-card">
+                <div class="search-bar">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="keyword-search" placeholder="Search job title, department, organization or keyword...">
+                </div>
+                
+                <div class="filters-grid">
+                    <select id="filter-location" class="filter-dropdown">
+                        <option value="">Location</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Islamabad">Islamabad</option>
+                        <!-- Other locations will be populated by JS -->
+                    </select>
+                    
+                    <select id="filter-education" class="filter-dropdown">
+                        <option value="">Education</option>
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="Master">Master</option>
+                        <option value="Matric">Matric</option>
+                    </select>
+
+                    <select id="filter-field" class="filter-dropdown">
+                        <option value="">Job Field</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="Accounting">Accounting & Finance</option>
+                        <option value="Administration">Administration</option>
+                    </select>
+
+                    <select id="filter-experience" class="filter-dropdown">
+                        <option value="">Experience</option>
+                        <option value="Fresh">Fresh</option>
+                        <option value="1 Year">1 Year</option>
+                        <option value="5 Years">5 Years</option>
+                    </select>
+
+                    <select id="filter-type" class="filter-dropdown">
+                        <option value="">Job Type</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Contract">Contract</option>
+                        <option value="Part Time">Part Time</option>
+                    </select>
+
+                    <select id="filter-salary" class="filter-dropdown">
+                        <option value="">BPS / Salary</option>
+                        <option value="BPS-17">BPS-17</option>
+                        <option value="50k-100k">Rs. 50,000 - 100,000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-actions">
+                    <button class="btn-primary" id="btn-search">Search Jobs</button>
+                    <button class="btn-text" id="btn-clear">Clear Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google AdSense Placeholder 1 -->
+    <div class="container ad-container">
+        <div class="ad-placeholder">
+            <span>ADVERTISEMENT SPACE</span>
+            <small>Responsive Google AdSense Banner</small>
+        </div>
+    </div>
+
+    <!-- Job Results Section -->
+    <main class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <h2 id="results-title">Latest Jobs</h2>
+                <div class="sort-options">
+                    <select id="sort-by" class="sort-dropdown">
+                        <option value="newest">Sort: Newest</option>
+                        <option value="deadline">Sort: Closing Soon</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Job Cards Container -->
+            <div id="job-listings" class="job-list">
+                <!-- Example Card (This will be generated automatically later by JavaScript) -->
+                <div class="job-card">
+                    <h3 class="job-title">Assistant Director</h3>
+                    <p class="job-org">National Accountability Bureau · Islamabad</p>
+                    <div class="job-badges">
+                        <span class="badge badge-gov">Government</span>
+                        <span class="badge badge-neutral">BPS-17</span>
+                        <span class="badge badge-neutral">Master</span>
+                    </div>
+                    <button class="view-details">View Details →</button>
+                </div>
+                
+                <div class="job-card">
+                    <h3 class="job-title">Senior Software Engineer</h3>
+                    <p class="job-org">Systems Limited · Lahore</p>
+                    <div class="job-badges">
+                        <span class="badge badge-private">Private</span>
+                        <span class="badge badge-neutral">Full Time</span>
+                        <span class="badge badge-neutral">BS (4 Years)</span>
+                    </div>
+                    <button class="view-details">View Details →</button>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn" disabled>« Prev</button>
+                <span class="page-info">Page 1 of 1</span>
+                <button class="page-btn">Next »</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#">Jobs in Pakistan</a>
+                <a href="#">Government Jobs</a>
+                <a href="#">Private Jobs</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Jobs in Pakistan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>
